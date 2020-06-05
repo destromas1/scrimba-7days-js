@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/src/2.add-two-digits.js"
+            "program": "${workspaceFolder}/src/3.first-duplicate.js"
         }
     ]
 }
