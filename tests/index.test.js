@@ -1,6 +1,7 @@
 import addBorder from "../src/1.add-border";
 import addTwoDigits from "../src/2.add-two-digits";
 import firstDuplicate from "../src/3.first-duplicate";
+import sumAllPrimes from "../src/4.sum-all-primes";
 
 describe("addBorder()", () => {
   it("adds a border around entire application", () => {
@@ -61,5 +62,35 @@ describe("firstDuplicate()", () => {
 
     // assert
     expect(result).toBe(-1);
+  });
+});
+
+describe("sumAllPrimes()", () => {
+  it("adds all prime numbers up to input number", () => {
+    // arrange
+    const num = 10;
+
+    // act
+    const result = sumAllPrimes(num);
+
+    // log
+    console.log("result: ", result);
+
+    // assert
+    expect(result).toBe(17);
+  });
+
+  it("adds all prime numbers up to input number", () => {
+    // arrange
+    const num = 977;
+
+    // act
+    const result = sumAllPrimes(num);
+
+    // log
+    console.log("result: ", result);
+
+    // assert
+    expect(result).toBe(73156);
   });
 });
