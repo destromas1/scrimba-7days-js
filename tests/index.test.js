@@ -3,6 +3,7 @@ import addTwoDigits from "../src/2.add-two-digits";
 import firstDuplicate from "../src/3.first-duplicate";
 import sumAllPrimes from "../src/4.sum-all-primes";
 import evenDigitsOnly from "../src/5.even-digits-only";
+import makeArrayConsecutive from "../src/6.make-array-consecutive";
 
 describe("addBorder()", () => {
   it("adds a border around entire application", () => {
@@ -122,6 +123,22 @@ describe("sumAllPrimes()", () => {
 
       // assert
       expect(result).toBe(false);
+    });
+  });
+
+  describe('makeArrayConsecutive()', () => {
+    it('returns total missing numbers between smallest and largest number', () => {
+      // arrange
+      const nums = [6, 2, 3, 8];
+
+      // act
+      const result = makeArrayConsecutive(nums);
+
+      // log
+      console.log("result: ", result);
+
+      // assert
+      expect(result).toBe(3);
     });
   });
 });
