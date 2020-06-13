@@ -2,6 +2,7 @@ import addBorder from "../src/1.add-border";
 import addTwoDigits from "../src/2.add-two-digits";
 import firstDuplicate from "../src/3.first-duplicate";
 import sumAllPrimes from "../src/4.sum-all-primes";
+import evenDigitsOnly from "../src/5.even-digits-only";
 
 describe("addBorder()", () => {
   it("adds a border around entire application", () => {
@@ -92,5 +93,35 @@ describe("sumAllPrimes()", () => {
 
     // assert
     expect(result).toBe(73156);
+  });
+
+  describe("evenDigitsOnly()", () => {
+    it("returns true when all digits are even", () => {
+      // arrange
+      const nums = 248622;
+
+      // act
+      const result = evenDigitsOnly(nums);
+
+      // log
+      console.log("result 1 : ", result);
+
+      // assert
+      expect(result).toBe(true);
+    });
+
+    it("returns fale when any digits are odd", () => {
+      // arrange
+      const nums = 642386;
+
+      // act
+      const result = evenDigitsOnly(nums);
+
+      // log
+      console.log("result 2 : ", result);
+
+      // assert
+      expect(result).toBe(false);
+    });
   });
 });
