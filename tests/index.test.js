@@ -4,6 +4,7 @@ import firstDuplicate from "../src/3.first-duplicate";
 import sumAllPrimes from "../src/4.sum-all-primes";
 import evenDigitsOnly from "../src/5.even-digits-only";
 import makeArrayConsecutive from "../src/6.make-array-consecutive";
+import properNounCorrection from "../src/7.proper-noun-correction";
 
 describe("addBorder()", () => {
   it("adds a border around entire application", () => {
@@ -126,8 +127,8 @@ describe("sumAllPrimes()", () => {
     });
   });
 
-  describe('makeArrayConsecutive()', () => {
-    it('returns total missing numbers between smallest and largest number', () => {
+  describe("makeArrayConsecutive()", () => {
+    it("returns total missing numbers between smallest and largest number", () => {
       // arrange
       const nums = [6, 2, 3, 8];
 
@@ -139,6 +140,36 @@ describe("sumAllPrimes()", () => {
 
       // assert
       expect(result).toBe(3);
+    });
+  });
+
+  describe("properNounCorrection()", () => {
+    it("adds proper noun capitalization", () => {
+      // arrange
+      const str = "pARiS";
+
+      // act
+      const result = properNounCorrection(str);
+
+      // log
+      console.log("result 1: ", result);
+
+      // assert
+      expect(result).toBe("Paris");
+    });
+
+    it("properly cased words are still correct", () => {
+      // arrange
+      const str = "John";
+
+      // act
+      const result = properNounCorrection(str);
+
+      // log
+      console.log("result 2: ", result);
+
+      // assert
+      expect(result).toBe("John");
     });
   });
 });
